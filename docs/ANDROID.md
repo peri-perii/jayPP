@@ -48,17 +48,17 @@ files (bundle, `capacitor.config.json`, `capacitor.settings.gradle`,
 
 The portal 403s any `Origin`/`Referer` that is not its own, so browsers must go
 through a proxy on the same origin as the page. The native shell loads the
-production deployment (`https://lazyportal-tan.vercel.app`) via `server.url` in
+production deployment (`https://jaypp.vercel.app`) via `server.url` in
 `capacitor.config.json`. This provides instant daily updates without requiring
 users to reinstall the APK.
 
 | Build | `BASE_URL` | Resolved by |
 |---|---|---|
 | `npm run dev`, browser deployment | `/api` (same-origin) | Vite proxy / Vercel rewrite |
-| Capacitor app | `https://lazyportal-tan.vercel.app/api` | `packages/web/src/lib/apiBase.js` |
+| Capacitor app | `https://jaypp.vercel.app/api` | `packages/web/src/lib/apiBase.js` |
 | Fork / preview | `VITE_API_BASE` (web), `VITE_NATIVE_API_BASE` (app) | same file |
 
-`shared/cors.js` allows `WEBVIEW_ORIGIN` (`https://lazyportal-tan.vercel.app`). Two
+`shared/cors.js` allows `WEBVIEW_ORIGIN` (`https://jaypp.vercel.app`). Two
 things must stay in sync:
 
 1. `WEBVIEW_ORIGIN` in `shared/cors.js` ↔ `server.url`

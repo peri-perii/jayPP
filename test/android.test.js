@@ -43,12 +43,12 @@ function pngSize(file) {
 test("capacitor.config.json identifies the app and the bundle", () => {
   const config = JSON.parse(read("capacitor.config.json"));
   assert.equal(config.appId, "com.lazyportal.juet");
-  assert.equal(config.appName, "JUET Portal");
+  assert.equal(config.appName, "J.P P");
   assert.equal(config.webDir, "packages/web/dist");
   // Point at the workspace that produces it, not at the output: `npm test` must
   // pass on a clean checkout, before any build.
   assert.ok(exists("packages/web/package.json") && exists("packages/web/vite.config.js"));
-  assert.equal(config.server?.url, "https://lazyportal-tan.vercel.app");
+  assert.equal(config.server?.url, "https://jaypp.vercel.app");
 });
 
 test("native project matches the Capacitor config", () => {
@@ -57,7 +57,7 @@ test("native project matches the Capacitor config", () => {
   assert.match(gradle, /namespace = "com\.lazyportal\.juet"/);
 
   const strings = read("android/app/src/main/res/values/strings.xml");
-  assert.match(strings, /<string name="app_name">JUET Portal<\/string>/);
+  assert.match(strings, /<string name="app_name">J\.P P<\/string>/);
 
   const activity = read("android/app/src/main/java/com/lazyportal/juet/MainActivity.java");
   assert.match(activity, /^package com\.lazyportal\.juet;/m);

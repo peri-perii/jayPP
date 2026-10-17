@@ -20,7 +20,7 @@
  * Installed builds keep calling whatever was baked in, so treat this as a
  * release-time constant: if the deployment moves, ship a new app build.
  */
-export const PROD_API_BASE = "https://lazyportal-tan.vercel.app/api";
+export const PROD_API_BASE = "https://jaypp.vercel.app/api";
 
 /**
  * @param {object} [options]

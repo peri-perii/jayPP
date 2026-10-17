@@ -169,7 +169,6 @@ export function DashboardPage({
   const [justSynced, setJustSynced] = useState(false);
   const [hasPlayedChoreography, setHasPlayedChoreography] = useState(false);
   const [shouldAnimateChoreography, setShouldAnimateChoreography] = useState(false);
-  const [barsReady, setBarsReady] = useState(false);
 
   const [lastSync, setLastSync] = useState<number | null>(() => {
     try {
@@ -461,10 +460,6 @@ export function DashboardPage({
     if (processedSubjects.length > 0 && !hasPlayedChoreography) {
       setHasPlayedChoreography(true);
       setShouldAnimateChoreography(true);
-      const id = requestAnimationFrame(() => {
-        setBarsReady(true);
-      });
-      return () => cancelAnimationFrame(id);
     }
   }, [processedSubjects.length, hasPlayedChoreography]);
 
@@ -720,9 +715,7 @@ export function DashboardPage({
                     strokeDasharray={226.19}
                     style={{
                       strokeDashoffset:
-                        barsReady || !shouldAnimateChoreography
-                          ? 226.19 * (1 - Math.min(100, Math.max(0, overallSummary.percentage ?? 0)) / 100)
-                          : 226.19,
+                        226.19 * (1 - Math.min(100, Math.max(0, overallSummary.percentage ?? 0)) / 100),
                     }}
                   />
                 </svg>
@@ -839,9 +832,9 @@ export function DashboardPage({
                         <div
                           className={`sub-progress-bar status-${sub.status}`}
                           style={{
-                            width: barsReady || !shouldAnimateChoreography ? `${barFillWidth}%` : "0%",
+                            width: `${barFillWidth}%`,
                             transition: shouldAnimateChoreography
-                              ? `width 1000ms var(--ease-reveal) ${200 + Math.min(idx, 7) * 70}ms`
+                              ? `width 800ms var(--ease-reveal) ${Math.min(idx, 7) * 50}ms`
                               : "width 250ms ease",
                           }}
                         />

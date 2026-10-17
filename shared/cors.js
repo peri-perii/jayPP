@@ -12,7 +12,7 @@
 // this is browser hygiene, not an access-control boundary.)
 
 /** WebView origin of the shipped shell. Keep in sync with capacitor.config.json. */
-export const WEBVIEW_ORIGIN = "https://lazyportal-tan.vercel.app";
+export const WEBVIEW_ORIGIN = "https://jaypp.vercel.app";
 
 /** Methods supported by the proxy; keep its request guard in sync. */
 export const ALLOWED_METHODS = Object.freeze(["GET", "HEAD", "POST", "OPTIONS"]);

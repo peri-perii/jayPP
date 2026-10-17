@@ -1,10 +1,10 @@
 {
   "appId": "com.lazyportal.juet",
-  "appName": "JUET Portal",
+  "appName": "J.P P",
   "webDir": "packages/web/dist",
   "backgroundColor": "#FCF8FD",
   "server": {
-    "url": "https://lazyportal-tan.vercel.app",
+    "url": "https://jaypp.vercel.app",
     "cleartext": false
   }
 }
