@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#141316" />
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem("juet.portal.theme");
+          if (t === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+          } else if (t === "system") {
+            var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+          } else {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="JUET" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <meta name="google-site-verification" content="KYCpNnkNPV7_GYA4spXr3_sMFjAe97mHp1azqS5l3Fc" />
+    <title>J.P P | Student Webportal, Webkiosk and Attendance</title>
+    <meta name="description" content="Student webportal and webkiosk companion for JUET students. Check attendance, calculate lecture margins, view internal marks, and keep your login active." />
+    <meta name="keywords" content="juet lazyportal, juet webportal, juet studentportal, juet portal, juet webkiosk, juet campuslynx, juet attendance, webkiosk juet, studentportal juet, campuslynx, lazyportal, webkiosk, attendance tracker, juet marks, jaypee university guna" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://lazyportal-tan.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="J.P P" />
+    <meta property="og:url" content="https://lazyportal-tan.vercel.app/" />
+    <meta property="og:title" content="J.P P | Student Webportal, Webkiosk and Attendance" />
+    <meta property="og:description" content="Student webportal and webkiosk companion for JUET students. Check attendance, calculate lecture margins, view internal marks, and keep your login active." />
+    <meta property="og:image" content="https://lazyportal-tan.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="J.P P student dashboard and attendance preview" />
+    <meta property="og:locale" content="en_IN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://lazyportal-tan.vercel.app/" />
+    <meta name="twitter:title" content="J.P P | Student Webportal, Webkiosk and Attendance" />
+    <meta name="twitter:description" content="Student webportal and webkiosk companion for JUET students. Check attendance, calculate lecture margins, view internal marks, and keep your login active." />
+    <meta name="twitter:image" content="https://lazyportal-tan.vercel.app/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://lazyportal-tan.vercel.app/#webapp",
+            "url": "https://lazyportal-tan.vercel.app/",
+            "name": "J.P P",
+            "alternateName": [
+              "Lazyportal",
+              "JUET Webportal",
+              "JUET Studentportal",
+              "JUET CampusLynx",
+              "JUET Portal",
+              "JUET Webkiosk",
+              "JUET Attendance Portal"
+            ],
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "Requires JavaScript",
+            "description": "Student webportal and webkiosk companion for Jaypee University of Engineering and Technology (JUET Guna) students to track attendance, inspect internal marks, and view course schedules.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR"
+            },
+            "featureList": [
+              "Subject attendance tracking and bunk margin calculation",
+              "Internal test and semester marks breakdown",
+              "Persistent login session without daily captcha prompt",
+              "Daily attendance cache with automatic rollover sync",
+              "Fast webkiosk alternative interface"
+            ]
+          },
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://lazyportal-tan.vercel.app/#organization",
+            "name": "Jaypee University of Engineering and Technology",
+            "alternateName": "JUET",
+            "url": "https://www.juet.ac.in/"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div style="font-family: sans-serif; max-width: 640px; margin: 40px auto; padding: 20px; line-height: 1.6;">
+        <h1>J.P P | Student webportal, webkiosk and attendance</h1>
+        <p>
+          J.P P is a student webportal and webkiosk companion for students at Jaypee University of Engineering and Technology (JUET Guna).
+        </p>
+        <h2>Features</h2>
+        <ul>
+          <li><strong>Attendance tracking.</strong> View lecture, tutorial, and practical attendance percentages, attended counts, and margins to keep your attendance above 75%.</li>
+          <li><strong>Internal marks.</strong> Inspect test marks, assignments, and semester scores.</li>
+          <li><strong>Webkiosk and CampusLynx alternative.</strong> Fast login with persistent sessions so you do not have to solve captchas every time you open the portal.</li>
+          <li><strong>Exam and seating.</strong> Check seating plans and registered semester courses.</li>
+        </ul>
+        <p>The interactive student portal dashboard requires JavaScript. Enable JavaScript in your browser to continue.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
